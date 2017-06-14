@@ -1,5 +1,5 @@
-<div class="nav-bar">
+<div class="sidebar">
     <h1>Bloc Chat</h1>
-    <div ng-repeat="room in home.chatRooms">{{ room.$value }}</div>
-    <div ng-controller="ModalCtrl as modal" ng-click="modal.open()">+ Add Room</div>
+    <div class="rooms" ng-repeat="room in home.chatRooms">{{ room.$value }}</div>
+    <div class="rooms" ng-click="home.open()">+ Add Room</div>
 </div>

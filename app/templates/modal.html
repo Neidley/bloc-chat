@@ -1,10 +1,10 @@
 <div class="modal-content">
     <h1>Create new room</h1>
     <div class="modal-header">Enter a room name</div>
-    <div class="modal-body" ng-controller="ModalCtrl as modal">
+    <div class="modal-body">
         <p><input type="text" ng-model="modal.roomName" class="span3" name="roomName" id="roomName" placeholder="new chat room"></p>
     </div>
-    <div class="modal-footer" ng-controller="ModalCtrl as modal">
+    <div class="modal-footer">
         <button type="button" class="btn-cancel" data-dismiss="modal" ng-click="modal.cancel()">Cancel</button>
         <button type="button" class="btn-ok" ng-click="modal.ok()">Create Room</button>
     </div>
