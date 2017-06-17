@@ -1,29 +1,39 @@
 body {
-    font-family: "Lato", sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+}
+
+.message-container {
+    margin-top: 42px;
 }
 
 .sidebar {
-    width: 15%;
-    padding-left: 15px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.sidebar .rooms:hover {
-    color: #FFFFFF;
-    background-color: red;
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
 }
 
-.btn-cancel,
-.btn-ok {
-    color: #aaa;
-    float: right;
-    font-weight: bold;
-}
-
-.btn-ok:hover,
-.btn-ok:focus,
-.btn-cancel:hover,
-.btn-cancel:focus {
-    color: black;
-    text-decoration: none;
+.nav-link:hover {
     cursor: pointer;
+    color: #fff;
+    background-color: #505050;
+}
+
+.bg-faded {
+    background-color: #f7f7f7;
 }

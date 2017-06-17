@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl($uibModal, Room) {
+    function HomeCtrl($uibModal, Room, Message) {
         this.chatRooms = Room.all;
 
         this.open = function () {
@@ -10,9 +10,19 @@
             });
         };
 
+        this.activeRoom = '';
+
+        this.getRoom = function(room) {
+            console.log(">>>>>>selected room", room.$value)
+            this.activeRoom = room.$value;
+            // use the room's ID to pull in the messages
+            // and make them available to the view's ng-repeat
+            this.activeMessages = Message.getByRoomId(room.$id);
+        };
+
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['$uibModal', 'Room', HomeCtrl]);
+        .controller('HomeCtrl', ['$uibModal', 'Room', 'Message', HomeCtrl]);
 })();

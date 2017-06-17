@@ -1,5 +1,22 @@
-<div class="sidebar">
-    <h1>Bloc Chat</h1>
-    <div class="rooms" ng-repeat="room in home.chatRooms">{{ room.$value }}</div>
-    <div class="rooms" ng-click="home.open()">+ Add Room</div>
+<div class="body">
+    <div class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+        <h1>Bloc Chat</h1>
+        <div class="nav-link" ng-repeat="room in home.chatRooms" ng-click="home.getRoom(room)">{{ room.$value }}</div>
+        <div class="nav-link" ng-click="home.open()">+ Add Room</div>
+    </div>
+    <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 message-container">
+        <h4>{{home.activeRoom}}</h4> <!-- {{home.activeRoom}} ? -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tbody>
+                    <!-- render out every message (ng-repeat on a property) -->
+                    <tr ng-repeat="message in home.activeMessages">
+                        <td>{{message.username}}</td>
+                        <td>{{message.content}}</td>
+                        <td>{{message.sentAt}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
