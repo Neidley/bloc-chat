@@ -13,7 +13,6 @@
         this.activeRoom = '';
 
         this.getRoom = function(room) {
-            console.log(">>>>>>selected room", room.$value)
             this.activeRoom = room.$value;
             // use the room's ID to pull in the messages
             // and make them available to the view's ng-repeat
