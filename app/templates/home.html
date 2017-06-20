@@ -4,19 +4,23 @@
         <div class="nav-link" ng-repeat="room in home.chatRooms" ng-click="home.getRoom(room)">{{ room.$value }}</div>
         <div class="nav-link" ng-click="home.open()">+ Add Room</div>
     </div>
-    <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 message-container">
+    <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 message-container" ng-show="home.activeRoom !== ''">
         <h4>{{home.activeRoom}}</h4>
         <div class="table-responsive">
             <table class="table table-striped">
                 <tbody>
                     <!-- render out every message (ng-repeat on a property) -->
-                    <tr ng-repeat="message in home.activeMessages">
+                    <tr ng-repeat="message in home.activeMessages" | orderBy : reverse> <!-- you probably want to look into doing the orderBy (in addition to ng-repeat) to order by the timestamp ascending -->
                         <td>{{message.username}}</td>
                         <td>{{message.content}}</td>
-                        <td>{{message.sentAt}}</td>
+                        <td>{{message.sentAt | date:'medium'}}</td> <!-- there is an angular filter for turning this into an actual date -->
                     </tr>
                 </tbody>
             </table>
+            <div class="message">
+                <p><input type="text" ng-model="home.newMessage" name="newMessage" id="newMessage" placeholder="Write your message..."></p>
+                <button type="button" class="btn-ok" ng-click="home.Message.send(home.activeRoom, home.newMessage)">Send</button>
+            </div>
         </div>
     </div>
 </div>

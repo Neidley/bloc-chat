@@ -11,6 +11,7 @@
         };
 
         this.activeRoom = '';
+        this.Message = Message;
 
         this.getRoom = function(room) {
             this.activeRoom = room.$value;

@@ -5,6 +5,9 @@
                 $cookies.currentUser = this.username;
                 $uibModalInstance.close();
             }
+            else {
+                alert('Please enter username.');
+            }
         console.log ('>>>>>currentUser', $cookies.currentUser);
         };
     }
