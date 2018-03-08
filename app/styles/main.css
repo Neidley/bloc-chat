@@ -9,6 +9,7 @@ body {
 
 .message-container {
     margin-top: 42px;
+    padding-top: 15px;
 }
 
 .sidebar {
@@ -36,4 +37,9 @@ body {
 
 .bg-faded {
     background-color: #f7f7f7;
+}
+
+img {
+  height: 50px;
+  width: 50px;
 }
