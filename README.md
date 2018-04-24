@@ -8,10 +8,6 @@
 
 ### User Stories:
 
-**Atom:**
-
-    a text editor for coding
-
 **List Chat Rooms**
 
     As a user, I want to see a list of available chat rooms
