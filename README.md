@@ -1,3 +1,43 @@
+# Space Chat:
+# Firebase and AngularJS to create a real-time chat application.
+
+### General Overview
+
+    Space Chat uses Firebase and AngularJS to create a real-time chat application.
+
+
+### User Stories:
+
+**Atom:**
+
+    a text editor for coding
+
+**List Chat Rooms**
+
+    As a user, I want to see a list of available chat rooms
+
+
+**Create Chat Rooms**
+
+    As a user, I want to create chat rooms
+
+
+**List Messages**
+
+    As a user, I want to see a list of messages in each chat room
+
+
+**Set Username**
+
+    As a user, I want to set my username to display in chat rooms
+
+
+**Send Messages**
+
+    As a user, I want to send messages associated with my username in a chat room
+
+## Initial Angular template instructions:
+
 ## Bloc Frontend Project Starter
 
 A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
